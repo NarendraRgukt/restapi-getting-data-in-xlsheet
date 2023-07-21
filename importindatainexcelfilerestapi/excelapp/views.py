@@ -11,6 +11,7 @@ from rest_framework.generics import GenericAPIView
 
 class UserRetrievingExcel(APIView):
     authentication_classes=[authentication.TokenAuthentication]
+    permission_classes=[IsAdminUser]
     
 
     def get_serializer_class(self):
