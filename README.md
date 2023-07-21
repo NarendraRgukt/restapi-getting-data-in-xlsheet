@@ -115,33 +115,6 @@ The Response contains the user information with updated fields<br>
   "name": "string"<br>
 }<br>
 
-<h1>GOOGLE Authentication End Points</h1><br>
-<h4>GET:http://127.0.0.1:8000/api/account/auth/google/</h4><br>
-REQUEST BODY:<br>
-No parameters<br>
-
-Responses:<br>
-STATUS:200<br>
-
-Response Body:<br>
-
-When the user requested to the above endpoint he will be redirected to Google authentication page<br>
-
-
-<h1>GET:http://127.0.0.1:8000/auth/complete/google-oauth2/</h1><br>
-
-When the user authentication completes the Google wil redirect the user to the above url with user information as query params,<br>
-based on whether the user exist the django authentication system will sent him the authtoken if the user did not exist it will create<br>
-the user on the user information and sent the authtoken<br>
-
-Responses:<br>
-STATUS:200<br>
-
-Response Body:<br>
-{<br>
-"token":"string",<br>
-"name":"string",<br>
-}<br>
 
 
 
